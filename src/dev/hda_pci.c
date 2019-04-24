@@ -215,7 +215,7 @@ static int discover_devices(struct pci_info *pci)
 	  if (i>=1 && bar!=0) { 
 	    DEBUG("Not expecting this to be a non-empty bar...\n");
 	  }
-	  if (!(bar & 0x0)) { 
+	  if (!(bar & 0x1)) { 
 	    uint8_t mem_bar_type = (bar & 0x6) >> 1;
 	    if (mem_bar_type != 0) { 
 	      ERROR("Cannot handle memory bar type 0x%x\n", mem_bar_type);
