@@ -130,6 +130,10 @@
 #include <dev/vesa.h>
 #endif
 
+#ifdef NAUT_CONFIG_HDA_PCI
+#include <dev/hda_pci.h>
+#endif
+
 #ifdef NAUT_CONFIG_ENABLE_BDWGC
 #include <gc/bdwgc/bdwgc.h>
 #endif
@@ -479,6 +483,10 @@ init (unsigned long mbd,
 
 #ifdef NAUT_CONFIG_E1000E_PCI
     e1000e_pci_init(naut);
+#endif
+
+#ifdef NAUT_CONFIG_HDA_PCI
+    hda_pci_init(naut);
 #endif
 
 #ifdef NAUT_CONFIG_NET_ETHERNET
