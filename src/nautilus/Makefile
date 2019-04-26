@@ -25,6 +25,7 @@ obj-y += \
 	smp.o \
 	idle.o \
 	thread.o \
+    fiber.o \
 	waitqueue.o \
 	group.o \
         timer.o \
@@ -53,7 +54,7 @@ obj-y += \
 	linker.o \
 	prog.o \
 	getopt.o \
-	cmdline.o 
+	cmdline.o
 
 obj-$(NAUT_CONFIG_PROFILE) += instrument.o
 obj-$(NAUT_CONFIG_XEON_PHI) += sfi.o
